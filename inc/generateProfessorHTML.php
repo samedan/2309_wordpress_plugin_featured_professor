@@ -20,7 +20,7 @@ function generateProfessorHTML($id){
          <?php 
             $relatedPrograms = get_field('related_programs');
             if($relatedPrograms) { ?>
-              <p>Name teaches: 
+              <p><?php echo wp_strip_all_tags(get_the_title()) ?> teaches: 
                <?php
                  foreach($relatedPrograms as $key => $program) {
                    // check to see if there are multiple programs and if it is the last one
